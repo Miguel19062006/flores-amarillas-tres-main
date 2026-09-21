@@ -30,13 +30,6 @@ body {
   font-weight: bold;
   letter-spacing: 4px;
 }
-@media only screen and (max-width: 600px) {
-  #lyrics {
-      font-size: 14px;
-      margin-bottom: 530px;
-      letter-spacing: 3px;
-  }
-}
 
 /* --- ESTILO CAMUFLADO Y LUMINOSO PARA LAS FLORES --- */
 .titulo {
@@ -69,6 +62,27 @@ body {
   }
   to {
     opacity: 1;
+  }
+}
+
+/* --- AJUSTES ESPECÍFICOS PARA MÓVILES (Evita sobreposiciones) --- */
+@media only screen and (max-width: 600px) {
+  #lyrics {
+      font-size: 13px;
+      margin-bottom: 400px; /* Ajustado para no chocar con el título */
+      letter-spacing: 2px;
+  }
+  .titulo {
+      top: 5%; /* Ubicado más arriba en la pantalla del celular */
+      font-size: 0.85rem; /* Letra un poco más compacta */
+      line-height: 1.4;
+      width: 92%;
+  }
+  .flowers {
+      font-size: 14px;
+      margin-bottom: 35%;
+      letter-spacing: 3px;
+      transform: scale(1.0);
   }
 }
 
@@ -118,15 +132,6 @@ body {
 .flowers {
   position: relative;
   transform: scale(0.9);
-}
-
-@media only screen and (max-width: 600px) {
-  .flowers {
-      font-size: 14px;
-      margin-bottom: 35%;
-      letter-spacing: 3px;
-      transform: scale(1.0);
-  }
 }
 
 .flower {
@@ -588,22 +593,4 @@ body {
 
 .cerrar-modal:hover {
   color: #fff;
-}
-
-@media screen and (max-width: 600px) {
-  .modal-content {
-    padding: 22px;
-    max-height: 82vh;
-  }
-  .modal-content h2 {
-    font-size: 1.2rem;
-  }
-  .modal-content p {
-    font-size: 0.88rem;
-  }
-  .btn-carta {
-    font-size: 0.9rem;
-    padding: 10px 22px;
-    bottom: 20px;
-  }
 }
